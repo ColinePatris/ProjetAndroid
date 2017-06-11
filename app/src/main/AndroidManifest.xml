@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.patris.duong.materiel_mobile_duong_patris">
-
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18"/>
-
-    <service android:name=".MyFirebaseInstanceIDService">
-        <intent-filter>
-            <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-        </intent-filter>
-    </service>
-
-    <provider
-        android:name="android.support.v4.content.FileProvider"
-        android:authorities="com.example.android.fileprovider"
-        android:exported="false"
-        android:grantUriPermissions="true">
-        <meta-data
-            android:name="android.support.FILE_PROVIDER_PATHS"
-            android:resource="@xml/file_paths"/>
-    </provider>
+    package="epf.projetandroid">
 
     <application
         android:allowBackup="true"
@@ -36,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.DetailsActivity" />
+        <activity android:name=".activities.DetailsActivity"></activity>
     </application>
 
 </manifest>
