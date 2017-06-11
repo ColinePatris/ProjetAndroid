@@ -2,6 +2,7 @@ package epf.projetandroid.activities;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +22,8 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
 
 import epf.projetandroid.R;
 
@@ -31,6 +34,7 @@ public class ListActivity extends AppCompatActivity {
     private StorageReference mStorageRef;
     private ImageView imageView;
     private TextView textView;
+    File localFile = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,24 +68,34 @@ public class ListActivity extends AppCompatActivity {
     }
 
     private void refresh() {
-        ImageView imageView = (ImageView) findViewById(R.id.photo_imageView);
+        final ImageView imageView = (ImageView) findViewById(R.id.photo_imageView);
         TextView textView = (TextView) findViewById(R.id.photo_textView);
 
-        /*File localFile = File.createTempFile("images", "jpg");
-        riversRef.getBytes(localFile)
+        try {
+            localFile = File.createTempFile("images", "png");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        StorageReference tempFile = mStorageRef.child("images/image.png");
+       tempFile.getFile(localFile)
                 .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                        // Successfully downloaded data to local file
-                        // ...
+                        Bitmap BckGrnd = BitmapFactory.decodeFile(String.valueOf(localFile));
+                        imageView.setImageBitmap(BckGrnd);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception exception) {
-                // Handle failed download
-                // ...
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(getBaseContext(), "Échec de connexion", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
-        });*/
+        });
     }
 
     private void dispatchTakePictureIntent() {
