@@ -6,4 +6,6 @@
     <string name="location"><u>Taken at</u></string>
     <string name="title"><u>Image name :</u></string>
     <string name="back">Back</string>
+    <string name="connection_fail">Échec de connexion</string>
+    <string name="upload_success">Téléversement réussi</string>
 </resources>
