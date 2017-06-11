@@ -1,6 +1,5 @@
 package epf.projetandroid.activities;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -36,7 +35,7 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu (Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.details_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
@@ -44,14 +43,15 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemID = item.getItemId();
-        switch (itemID){
+        switch (itemID) {
             case android.R.id.home:
                 finish();
                 break;
-            case R.id.action_delete :
+            case R.id.action_delete:
                 finish();
                 break;
-            default: break;
+            default:
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

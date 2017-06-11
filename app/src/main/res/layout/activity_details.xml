@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,16 +17,16 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="@string/title"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/title_textView"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -35,16 +34,16 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="@string/location"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/gps_textView"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -52,16 +51,16 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="@string/width"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/width"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/width_textView"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -69,16 +68,16 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="@string/height"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/height"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/heigth_textView"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -86,15 +85,15 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="@string/date"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/date_textView"
-            android:textSize="24sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="24sp" />
     </LinearLayout>
 </LinearLayout>

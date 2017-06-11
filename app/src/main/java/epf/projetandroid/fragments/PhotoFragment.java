@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,17 +24,12 @@ public class PhotoFragment extends ListFragment {
 
         List<photo> photos = new ArrayList<>();
         photo photo = null;
-        try {
-            photo = new photo("potittatou.jpg");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         photos.add(photo);
         ArrayAdapter<photo> adapter = new photoAdapter(getActivity(), photos);
         setListAdapter(adapter);
     }
 
-    public void onListItemClick (ListView l, View v, int position, long id){
+    public void onListItemClick(ListView l, View v, int position, long id) {
         Intent intent = new Intent(getActivity(), DetailsActivity.class);
         intent.putExtra(PHOTO_ID, position);
         startActivity(intent);
