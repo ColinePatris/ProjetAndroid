@@ -7,7 +7,6 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -30,7 +29,6 @@ import epf.projetandroid.R;
 public class ListActivity extends AppCompatActivity {
 
     private static final int PHOTO_OK = 1;
-    private static final String TAG = "here";
     private StorageReference mStorageRef;
     private ImageView imageView;
     private TextView textView;
@@ -68,8 +66,6 @@ public class ListActivity extends AppCompatActivity {
     }
 
     private void refresh() {
-        final ImageView imageView = (ImageView) findViewById(R.id.photo_imageView);
-        TextView textView = (TextView) findViewById(R.id.photo_textView);
 
         try {
             localFile = File.createTempFile("images", "png");
@@ -78,7 +74,7 @@ public class ListActivity extends AppCompatActivity {
         }
 
         StorageReference tempFile = mStorageRef.child("images/image.png");
-       tempFile.getFile(localFile)
+        tempFile.getFile(localFile)
                 .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
