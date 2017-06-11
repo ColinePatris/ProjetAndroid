@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Photo Sharing</string>
+    <string name="date"><u>Taken the</u></string>
+    <string name="height"><u>Height :</u></string>
+    <string name="width"><u>Width :</u></string>
+    <string name="location"><u>Taken at</u></string>
+    <string name="title"><u>Image name :</u></string>
+    <string name="back">Back</string>
+</resources>
